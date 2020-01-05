@@ -17,24 +17,43 @@ Taking the Basic Hello World Application in Spring Boot! further. This example c
 - IntelliJ CE - Version CE 2019.2
 - Maven - Version 3.6.1
 - Docker Desktop - Version 2.1.0.1 (37199)
-- Kubernetes - 
-- Helm - Version 
+- Kubernetes - v1.14.3
+- Helm - v2.14.3
 
 ## Initial Setup
 
 ### Creating Spring project
 
-Follow the steps outlined in [docker-spring-boot-helloworld](https://github.com/ameyrupji/docker-spring-boot-helloworld) GitHub project to create a Spring Boot application.
+Follow the steps outlined in [docker-spring-boot-helloworld](https://github.com/ameyrupji/docker-spring-boot-helloworld) GitHub project to create a Spring Boot docker container. 
+
+The basic commands required to create a container are"
 
 ```
 mvn clean install
 docker build -t spring-boot-helloworld:v1 .
 ```
 
-`helm lint ./helm`
+### Adding Helm charts
 
-`helm install --name helloworld ./helm`
-`helm ls`
+Making the docker container deployable on kubernetes using helm create the necessary charts by running command `helm create {chart name}` in this case the chart name can be `spring-boot-helloworld-chart`. This will create a folder with that name and add default chart templates.
+
+Look the modified code in the `spring-boot-helloworld-chart` directory. The files to look at are `templates/deployment.yaml`, `templates/service.yaml`, and `values.yaml`. The application is exposed on port `31000` which is defines as the `nodePort` value in the `values.yaml` file.
+
+
+### Validate the created charts
+
+To validate the created helm charts run the following command:
+
+`helm lint ./spring-boot-helloworld-chart/`
+
+![terminal helm lint](images/terminal-helm-lint.png)
+
+### Run Helm Install
+
+`helm install --name ./spring-boot-helloworld-chart/`
+`helm list`
+
+
 
 `helm upgrade helloworld ./helm`
 
