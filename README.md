@@ -64,19 +64,28 @@ To validate the created helm charts run the following command:
 
 ### Run Helm Install
 
+To install the app using kubernetes run the following command:
+
 `helm install --name spring-boot-helloworld -f ./spring-boot-helloworld-chart/values.yaml ./spring-boot-helloworld-chart/`
 
-![terminal helm lint](images/terminal-helm-lint.png)
+![terminal helm lint](images/terminal-helm-install.png)
+
+### Run Helm List
+
+To view the installed app run the following command:
 
 `helm list`
 
-![terminal helm lint](images/terminal-helm-install.png)
+![terminal helm lint](images/terminal-helm-lint.png)
+
+### Run Helm Update
+
+To update the application run the following command:
 
 `helm upgrade helloworld ./helm`
 
 
 ## Test 
-
 
 Run the following command to ensure the server is running: `curl http://localhost:31000/helloworld/`
 
