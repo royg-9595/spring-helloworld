@@ -1,4 +1,7 @@
-# K8s-spring-boot-helloworld
+| ◂ [Previous](https://github.com/ameyrupji-k8s/docker-spring-boot-helloworld) |
+|-----|
+
+# k8s-spring-boot-helloworld
 
 Taking the Basic Hello World Application in Spring Boot! further. This example creates a docker container containing a Spring Boot application with a Controller that returns "Hello World!" which gets deployed to a kubernetes luster using helm.
 
@@ -106,3 +109,5 @@ To stop the container that is running use this command: `helm delete --purge spr
 - https://stackify.com/guide-docker-java/
 - https://helm.sh/docs/helm/
 
+| [Next ▸](https://github.com/ameyrupji-k8s/k8s-spring-boot-helloworld-liveness-readiness-probes) |
+|-----|
