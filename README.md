@@ -71,6 +71,10 @@ To install the app using kubernetes run the following command:
 
 `helm install --name spring-boot-helloworld -f ./spring-boot-helloworld-chart/values.yaml ./spring-boot-helloworld-chart/`
 
+Alternatively you can also use `upgrade` command with the `--install` flag:
+
+`helm upgrade spring-boot-helloworld ./spring-boot-helloworld-chart/ -f ./spring-boot-helloworld-chart/values.yaml --install --namespace default`
+
 ![terminal helm lint](images/terminal-helm-install.png)
 
 ### Run Helm List
@@ -85,7 +89,7 @@ To view the installed app run the following command:
 
 To update the application run the following command:
 
-`helm upgrade helloworld ./helm`
+`helm upgrade spring-boot-helloworld ./spring-boot-helloworld-chart/ -f ./spring-boot-helloworld-chart/values.yaml --namespace default`
 
 
 ## Test 
