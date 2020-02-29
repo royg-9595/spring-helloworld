@@ -5,6 +5,7 @@
 
 Taking the Basic Hello World Application in Spring Boot! further. This example creates a docker container containing a Spring Boot application with a Controller that returns "Hello World!" which gets deployed to a kubernetes luster using helm.
 
+**Note:** Refer [docker-spring-boot-helloworld](https://github.com/ameyrupji-k8s/docker-spring-boot-helloworld) repo.
 
 ## Prerequisites
 
