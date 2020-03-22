@@ -28,7 +28,7 @@ Taking the Basic Hello World Application in Spring Boot! further. This example c
 
 ### Installing tiller
 
-Run the folloewing commands to install tiller if already not installed on your local cluster 
+Run the following commands to install tiller if already not installed on your local cluster 
 
 ```shell script
 kubectl -n kube-system create serviceaccount tiller
