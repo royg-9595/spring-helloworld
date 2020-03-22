@@ -53,7 +53,7 @@ docker build -t spring-boot-helloworld:v1 .
 
 ### Adding Helm charts
 
-Making the docker container ready to be deployed on kubernetes using helm create the necessary charts by running command `helm create {chart name}` in this case the chart name should be same as the the project name in this case `spring-boot-helloworld`. This will create a folder with that name and add default chart templates.
+Making the docker container ready to be deployed on kubernetes using helm create the necessary charts by running command `helm create {chart name}` in this case the chart name should be same as the the project name in this case `spring-boot-helloworld`. This will create a folder with that name and add default chart templates. Here is the [link](https://helm.sh/docs/helm/helm_create/) to the documentation of the files created.
 
 Look the modified code in the `spring-boot-helloworld` directory. The files to look at are `templates/deployment.yaml`, `templates/service.yaml`, and `values.yaml`. The application is exposed on port `31000` which is defines as the `nodePort` value in the `values.yaml` file.
 
@@ -62,7 +62,7 @@ Look the modified code in the `spring-boot-helloworld` directory. The files to l
 
 To validate the created helm charts run the following command:
 
-`helm lint ./spring-boot-helloworld/`
+`helm lint ./spring-boot-helloworld-chart/`
 
 ![terminal helm lint](images/terminal-helm-lint.png)
 
